@@ -1,3 +1,29 @@
+# General 
+
+semantic.json
+sinc.bat
+config.json
+yarn.lock
+package-lock.json
+/package
+/semantic
+/node_modules
+/src/js/module
+/src/html/cadastro
+/src/html/lancamento
+/src/html/notificacao
+/src/html/relatorio
+
+# Application directory
+
+app/package-lock.json
+app/index.js
+app/index.html
+/app/node_modules
+/app/js
+/app/css
+/app/html
+
 # Logs
 logs
 *.log
