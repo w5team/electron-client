@@ -1,0 +1,3 @@
+// Install npm node dependency to DEV
+
+npm i --save-dev electron electron-builder gulp@next gulp-autoprefixer gulp-clean-css gulp-concat gulp-html-minifier2 gulp-if gulp-javascript-obfuscator gulp-sass gulp-uglify install jquery jquery-mask-plugin npm semantic-ui streamqueue uglify-es yargs

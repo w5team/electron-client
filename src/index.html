@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>W5CEmp</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>        
+        <div class="windowbar">
+            <div class="logo" id="logo">
+                <img src="img/icon.png">
+            </div>
+            <div class="bar" title="Duplo click para maximizar/minimizar ou arraste a janela segurando aqui">
+                <span id="toptitle"></span>
+            </div>
+            <div id="topclose" title="Fechar">
+                <i class="material-icons">clear</i>
+            </div>
+        </div>
+
+        <div class="main" id="main">
+            <div class="mmenu" id="mmenu">                
+                <div class="mmenuicon">
+                    <div id="topmenu" title="Menu" class="on">
+                        <i class="list icon"></i>
+                        <span>Menu</span>       
+                    </div>
+                    <div id="topchat" title="Chat - desligado">
+                        <i class="material-icons">chat</i>
+                        <span>Chat</span>
+                    </div>
+                    <div id="topbell" title="Notificações">
+                        <i class="bell icon"></i>
+                        <a class="ui red circular label" id="topbellvalue">1</a>
+                        <span>Alerta</span>       
+                    </div>
+                    <div id="topconnect" title="Conexão">
+                        <i class="rss icon"></i>
+                        <span>Conexão</span>
+                    </div>
+                </div>
+                <div id="menu" class="ui accordion">                    
+                    <div class="title active" data-module="cadastro" id="mncadastro"><i class="material-icons">assignment_turned_in</i>Cadastro</div>
+                    <ul class="content submenu active">
+                        <li data-module="cadastro" data-page="cliente">Cliente</li>
+                        <li data-module="cadastro" data-page="concessionaria">Concessionária</li>
+                        <li data-module="cadastro" data-page="seguradora">Seguradora</li>
+                        <li data-module="cadastro" data-page="fornecedor">Fornecedor</li>
+                        <li data-module="cadastro" data-page="veiculo">Veículo</li>
+                    </ul> 
+                    <div class="title" data-module="lancamento" id="mnlancamento"><i class="material-icons">assignment</i>Lançamento</div>
+                    <ul class="content submenu">
+                        <li data-module="lancamento" data-page="veiculo_historico">Histórico de Veículo</li>
+                        <li data-module="lancamento" data-page="contrato">Contrato</li>
+                        <li data-module="lancamento" data-page="sinistro">Sinistro</li>
+                        <li data-module="lancamento" data-page="infracao">Infração</li>
+                        <li data-module="lancamento" data-page="os">Ordem de Serviço</li>
+                        <li data-module="lancamento" data-page="venda">Venda</li>
+                        <li data-module="lancamento" data-page="nota">Nota</li>
+                    </ul>
+                    <div class="title" data-module="relatorio" id="mnrelatorio"><i class="material-icons">print</i>Relatório</div>
+                    <ul class="content submenu">
+                        <li data-module="relatorio" data-page="veiculo">Veículo</li>
+                        <li data-module="relatorio" data-page="nota">Nota</li>
+                        <li data-module="relatorio" data-page="sinistro">Sinistro</li>
+                        <li data-module="relatorio" data-page="os">Ordem de Serviço</li>
+                        <li data-module="relatorio" data-page="infracao">Infração</li>
+                        <li data-module="relatorio" data-page="venda">Venda</li>
+                    </ul>
+                    <div class="title" data-module="cadastro" id="mnconfig"><i class="material-icons">assessment</i>Configuração</div>
+                    <ul class="content submenu">
+                        <li data-module="cadastro" data-page="empresa">Empresa</li>
+                        <li data-module="cadastro" data-page="usuario">Usuário</li>
+                        <li data-module="cadastro" data-page="fabricante">Modelo de Veículo</li>
+                        <li data-module="cadastro" data-page="veiculo_historico_acao">Histórico de Veículo</li>
+                        <li data-module="cadastro" data-page="tipo_infracao">Tipo de Infração</li>
+                        <li data-module="cadastro" data-page="tipo_nota">Tipo de Nota</li>
+                        <li data-module="cadastro" data-page="tipo_os">Tipo de OS</li>
+                    </ul>
+                    <div class="title" data-module="notificacao" id="mnnotificacao"><i class="material-icons">assignment_late</i>Notificação</div>
+                    <ul class="content submenu">
+                        <li data-module="notificacao" data-page="infracao">Infração</li>
+                    </ul>
+                </div>
+
+                <div id="notification" class="notification"><span class="default">Você não tem novas notificações!<i class="bell slash outline icon"></i></span></div>
+
+                <div id="appinfo"></div>
+            </div>
+            <!-- BODY -------------------------------- BEGIN -->
+            <div class="body" id="body"></div>
+            <!-- BODY -------------------------------- END -->
+        </div>
+        <!-- Toast -->
+        <div class="ctoast" id="ctoast"></div>
+        <div class="blackout" id="blackout"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="js/vendor.js"></script>        
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,597 @@
+*,
+*:before,
+*:after {
+    outline: none;
+}
+
+body {
+    display: none;
+    min-height: 100vh;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #AAA;
+    font-family: Roboto !important;
+}
+
+html {
+    background-color: #8C0000;
+}
+
+
+/* -------------------------------- BLACKOUT -----------------*/
+.blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(150, 150, 150, 0.84);
+    z-index: 1;
+    display: block;
+}
+
+/* Top Bar da janela */ 
+.windowbar {
+    height: 29px;
+    margin: 1px 0 0 0;
+    z-index: 3000;
+    box-shadow: 0 -10px 90px rgba(0,0,0,.15);
+    border-bottom: 1px solid #d5d9de;
+}
+.windowbar .bar {
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    width: calc(100% - 92px);
+    height: 30px;
+    display: inline-block;
+    margin: -2px 0 0 50px;
+}
+.windowbar #toptitle {
+    z-index: 2000;
+    display: inline-block;
+    color: #000;
+    height: 30px;
+    vertical-align: bottom;
+    line-height: 15px;
+    padding: 8px 5px 0 5px;
+    font-size: 17px;
+}
+
+/* --- Logo --- */
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 10px 7px 10px;
+    z-index: 10000;
+    cursor: pointer;
+}
+.logo img {
+    width: 36px;
+}
+
+
+/* ---------------- Botão da Janela ----------------*/
+#topclose:hover {
+    color: #FFF;
+    background: #F4511E;
+}
+#topclose {
+    width: 44px;
+    height: 30px;
+    padding: 6px 0 0 0;
+    margin: -2px -1px 0 -1px;
+    cursor: pointer;
+    color: #444;
+    float: right;
+    z-index: 4000;
+    text-align: center;
+    position: relative;
+    /* text-align: left; */
+    /* line-height: 15px; */
+    /* font-weight: 100!important; */
+    /* font-size: 16px; */
+    /* display: inline-block; */
+}
+#topclose i {
+    font-size: 18px;
+}
+
+
+/* ---------------- TOP BAR -----*/
+.topbar {
+    display: none;
+    padding: 4px 10px;
+    text-align: center;
+    height: 46px;
+    z-index: 100;
+    position: relative;
+}
+.topbar #buscar {
+    min-width: 400px;    
+    font-weight: bold;
+    border-radius: 500em;
+}
+.topbar .control {
+    display: inline-block;
+    text-align: left;
+}
+
+
+/* --------------------------- TOAST ------------- */
+
+.ctoast {
+    position: fixed;
+    z-index: 3100;
+    left: 50%;
+    width: 400px;
+    margin: 0 0 0 -200px;
+    text-align: center;
+    top: 31px;
+    transition: 1s;
+    padding: 0;
+}
+.toast {
+    margin: 10px auto;
+    padding: 15px 20px;
+    opacity: 0;
+    margin-top: -50px;
+    transition: .6s;
+    background: #000 url(../img/x.png) 98.5% 8% no-repeat;
+    color: #FFF;
+    text-align: left;
+    width: fit-content;
+    cursor: pointer;
+}
+.toast.active {
+    opacity: 1;
+    margin-top: 0;
+}
+/*  --- CORES do TOAST --- */
+.blu {
+    background-color: #008CBA !important;
+}
+.red {
+    background-color: #C62828 !important;
+}
+.ora {
+    background-color: #ff5722 !important;
+}
+
+/* --------------------------- SECURITY / LOGIN --------------------*/
+.security {
+    position: fixed;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: #999 url(../img/b.jpg) bottom no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+.security img {
+    width: 100px;
+    margin: -20px auto 20px auto;
+    display: block;
+}
+.security form {
+    position: fixed !important;
+    z-index: 100;
+    right: 6%;
+    bottom: 5%;
+    margin: 0;
+    padding: 0;
+}
+.security input {
+    color: #f4511e !important;
+    font-weight: bold;
+    border: none!important;
+}
+.security button {
+    margin: 0 !important;
+    width: 100px;
+    height: 37px;
+    float: right;
+}
+.security button:hover {
+    box-shadow: none !important;
+}
+.security .sobre {
+    font-weight: 100;
+    margin: -11px 12px 0 2px;
+    color: #DDD;
+    font-size: .8em;
+}
+.security .sobre b {
+    color: #FFF;
+}
+
+
+/* --------------------------- DASHBORAD ---------------------------*/
+
+.dashboard {
+    margin: auto;
+    margin-top: calc(50vh - 200px);
+    width: 300px;
+}
+.dashboard img {
+    opacity: .2;
+    width: 300px;
+    height: 300px;
+}
+.dashboard h2 {
+    text-align:  center;
+}
+
+/* --------------------------- MAIN / BODY -------------------------*/
+
+.main {
+    min-height: 100vh !important;
+    padding: 0;
+}
+
+#body {
+    transition: .2s, margin .4s, width .4s;
+    margin: 0 0 0 200px;
+    display: inline-block;
+    width: calc(100% - 200px);
+    height: 100vh;
+    padding: 0;
+    transition: .2s;
+}
+#body.on {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+#form {
+    padding: 0 10px 20px 10px;
+    margin: 0;
+    overflow: auto;
+    height: calc(100vh - 78px);
+}
+#form.form_report {
+    height: calc(100vh - 45px);
+}
+
+
+/* ----------------------------- MENU LATERAL ---------------*/
+#menu {
+    margin-top: 15px;
+}
+.mmenu {
+    transition: margin .4s;
+    width: 200px;
+    min-height: calc(100vh - 32px);
+    display: inline-block;
+    margin: 0 0 0 -200px;
+    padding: 32px 0 0 0;
+    float: left;
+    position: fixed;
+    top: 31px;
+    background: #f1f1f4;
+    border-right: 1px solid #d5d9de;
+    color: #000;
+    font-weight: 100;
+    font-family: Roboto !important;
+    /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important; */
+}
+.mmenu.on {
+    margin: 0;
+}
+.mmenu.float{
+    box-shadow: 0 20px 60px rgba(0,0,0,.2);
+    z-index: 2000;
+}
+.mmenu .title {
+    font-size: 1.1em !important;
+    padding-left: 48px !important;
+    color: #000 !important;
+}
+.mmenu .title i.material-icons {
+    margin: 1px 0 0 -35px;
+    float: left;
+    opacity: .7;
+}
+.mmenu .title.active {
+    color: #F4511E !important;
+    font-weight: bold;
+}
+.mmenu .content {
+}
+.mmenu .content li {
+    padding: 5px 5px 5px 50px;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+}
+.mmenu .content li:hover {
+    color: #FF5722;
+}
+.mmenu .content li.active {
+    font-weight: 500;
+    color: #F4511E;
+}
+.mmenu li.destaque {
+    font-weight: 600;
+}
+.submenu .divider {
+    margin: 14px 30px 10px 40px;
+    border-top: 8px dotted #505050;
+    padding: 0;
+}
+
+/* --- barra de ícones de ação do MENU ----*/
+.mmenuicon {
+    border-bottom: 1px solid #d5d9de;
+    padding: 13px 5px;
+    margin: -27px 0 0 0;
+    text-align: right;
+}
+.mmenuicon div {
+    font-size: 1.4em;
+    display: inline-block;
+    width: 44px;
+    text-align: center;
+    padding: 2px 0;
+    color: #CCD;
+    text-shadow: 0 0 2px #FFF;
+    cursor: pointer;
+}
+.mmenuicon div:hover{
+    color: #000;
+}
+.mmenuicon div.on {
+    color: #F4511E;
+}
+.mmenuicon .icon {
+    margin: 0;
+}
+.mmenuicon div span {
+    font-size: .5em;
+    display: block;
+}
+.mmenuicon div i.material-icons + span {
+    margin: -6px 0 0 0;
+}
+#topbell a {
+    display: none;
+    margin: 0 0 0 -13px;
+    font-size: .4em;
+    position: absolute;
+    box-shadow: -1px 1px 5px #FFF;
+}
+
+/* ----- NOTIFICATION lateral (sob o menu) ----------*/
+.notification {
+    display: none;
+    height: calc(100vh - 150px);
+    overflow: auto;
+}
+.notification .autolink:hover {
+    color: #039;
+    text-decoration: underline;
+}
+.notification .autolink {
+    cursor: pointer;
+}
+
+.notification .default {
+    padding: 20px;
+    margin: 0;
+    color: #930;
+    font-size: 1.3em;
+    font-weight: 400;
+    display: block;
+}
+.notification .icon {
+    font-size: 4em;
+    margin: 0 auto;
+    display: block;
+    color: #D7CCC8;
+}
+
+
+
+.notification h3 {
+    color: #AD1457;
+    margin: 0;
+    font-size: 1.1em;
+}
+.notification .mensagem {
+    margin: 10px;
+    padding: 6px 10px;
+    background: #FFF;
+    cursor: pointer;
+}
+.notification .mensagem:hover {
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+.notification .mensagem i.icon {
+    float: right;
+    font-size: 16px;
+    margin: -5px;
+    color: #C5E1A5;
+}
+.notification .mensagem p {
+    font-size: .9em;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+.notification .mensagem span {
+    font-size: .6em;
+    float: left;
+    margin: -12px 0 0 0;
+    color: #F00;
+}
+
+
+/* para uso do servidor */
+#appinfo {
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+    color: #666;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* ------------------------- FORMULARIO ------------- */
+#list {
+    display: none;
+    min-height: calc(100vh - 168px);
+}
+#list.open {
+    display: block;
+}
+#list button{
+    box-shadow: none;
+}
+.list tr:hover td {
+    background: #FFE;
+    color: #0269bb;
+}
+#edit {
+    display: none;
+    padding: 30px 0;
+    transition: opacity .6s, margin .6s;
+    margin: 0;
+    opacity: 0;
+    z-index: 50;
+}
+#edit.open {
+    display: block;
+    opacity: 1;
+}
+.field.file input[type=file] {
+    background: #000;
+    color: #FFF;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    z-index: 2000;
+}
+.field.file {
+    padding: 0 0 10px 0;
+}
+
+
+/* ------------------------- FORMS -------------------- */
+.form.edit {
+    display:  none;
+}
+.form .control {
+    margin: 30px 0;
+    text-align:  right;
+    min-width: 100px;
+}
+.form .control button {
+    min-width: 100px;
+}
+.buscamodelo {
+    width: 400px !important;
+    padding: 30px;
+}
+.buscamodelo label {
+    width: 120px !important;
+    display: inline-block;
+}
+.buscamodelo .control {
+    text-align: right;
+}
+.buscamodelo .control button {
+    min-width: 100px;
+}
+
+.lateralTitle {
+    padding: 25px 0 0 0;
+    font-size: 1.4em;
+}
+
+/* ------------------------------- TABLES -------------------*/
+.table-edit td {
+    cursor: pointer;
+}
+
+/* ------------------------------ UTILS ---------------------*/
+.text-right {
+    text-align:  right !important;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.deleted {
+    opacity:  .5;
+    color: #999;
+}
+.hidden {
+    display: none;
+}
+.invisivel {
+    display: none !important;
+}
+.reportZone {
+    display: none;
+}
+.report_form h2 {
+    margin: 40px 0;
+}
+.report_form .control {
+    margin: 50px 0 0 0;
+}
+
+/* ------------------------------ Table Nota/OS -------------- */
+.notatable tr th{
+    text-align: center !important;
+}
+.notatable tr th:first-child {
+    text-align: left !important;
+}
+.notatable tbody td{
+    padding: 0 !important;
+}
+.notatable .ntpad {
+    padding: 6px !important;
+}
+.notatable tr.destaque td, 
+.notatable tr.destaque td input {
+    background: #FCC !important;
+}
+.intable {
+    border: none !important;
+    width: 100% !important;
+    margin: 0;
+}
+.intable.bold{
+    font-weight: bold !important;
+}
+input.money {
+    min-width: 118px !important;
+}
+
+
+/* ------------------------------ Listagem em notificação -> infração ----------------- */
+#listagem table button {
+    box-shadow: none;
+}
+#listagem {
+    margin: 0 0 30px 0;
+}
+tr.listitem.off {
+    background: #eee;
+    color: #CCC;
+}
+tr.listitem i.close {
+    color: #E91E63;
+}
+
+tr.listitem i.plus {
+    color: #b1d3e2;
+}

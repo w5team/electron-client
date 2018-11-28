@@ -1,0 +1,82 @@
+body {
+	font: 8pt Tahoma, Verdana, sans-serif;
+	margin:0;
+	padding:20px;
+	line-height: 1.4em;
+	background:  #FFF;
+	color: #000;
+}
+@page {
+	margin: 0.5cm;
+}
+
+h1 { font-size: 24pt}
+h2 { font-size: 18pt}
+h3 { font-size: 14pt}
+p { widows: 3}
+p { orphans: 3}
+img, table {max-width: 96% !important}
+
+button {
+    padding: 8px 20px;
+    border: none;
+    box-shadow: 0 0 3px rgba(0,0,0,.4);
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: #FFF;
+    border-radius: 500em;
+}
+button.excel {
+    margin-left: 4px;
+    background: #009688;
+}
+
+/* ----- TABLE   --------------*/
+table {
+	width: 96%;
+	border-collapse:collapse;
+    border-spacing:0;
+    margin: 10px 0 20px 0;
+}
+table th {
+	border-bottom: 2px solid #777;
+	padding: 5px;
+}
+table td {
+	border-bottom: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	padding: 5px;
+}
+table td:first-child {
+	border-left: 1px solid #DDD;
+}
+tfoot th {
+    padding: 20px 0 10px;
+    border-top: 2px solid #777;
+}
+
+.page-break {page-break-before: always}
+
+/* ---------------- Cabeçalho da Página de impressão --*/
+.reportControl {
+	text-align: right;
+}
+.reportHeader{
+	display: block;
+}
+.reportHeader h1 {
+    clear: both;
+    margin: 10px 0 20px 0;
+}
+
+
+/*CSS para impressão*/
+@media print {
+	body {
+		padding: 0;
+	}
+	.reportControl {
+		display: none;
+	}
+}
